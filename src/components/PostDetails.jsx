@@ -12,9 +12,10 @@ const PostDetails = () => {
   const postComments = comments.filter(c => c.postId.toString() === id);
 
   
-  const [newComments,setNewComments] = useState(postComments);
+  
   const [author, setAuthor] = useState('');
   const [text, setText] = useState('');
+  const [allComments, setAllComments] = useState(postComments);
   
   
   
@@ -35,13 +36,13 @@ const PostDetails = () => {
     }
   
    const newComment = {
-    id: newComments.length + 1 , // simple ID
+    id: allComments.length + 1 , // simple ID
     postId: post.id,
     author,
     text,
     date: new Date().toISOString()
    }
-    setNewComments([...comments, newComment]);
+    setAllComments([...allComments, newComment]);
     setAuthor('');
     setText('');
   }
@@ -53,9 +54,9 @@ const PostDetails = () => {
       <button onClick={() => navigate(-1)}>Back</button>
     
     <h3>Comments:</h3>
-      {postComments.length > 0 ? (
+      {allComments.length > 0 ? (
         <ul>
-          {postComments.map(comment => (
+          {allComments.map(comment => (
             <li key={comment.id}>
               <strong>{comment.author}:</strong> {comment.text}
             </li>
