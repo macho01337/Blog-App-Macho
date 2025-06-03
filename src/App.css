@@ -1,5 +1,17 @@
-/* App */
+ /* App */
 
+ @media (max-width: 768px) {
+  .post-grid {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+  .nav-links {
+    flex-direction: column;
+  }
+  .navbar-container {
+    flex-direction: column;
+  }
+}
 
 
 /* Navbar */

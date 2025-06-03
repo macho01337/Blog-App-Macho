@@ -3,6 +3,7 @@ import Navbar from './components/Navbar'
 import PostDetails from './components/PostDetails'
 import HomePage from './pages/HomePage'
 import './App.css'
+import './components/PostDetails.css'
 function App() {
 
 
