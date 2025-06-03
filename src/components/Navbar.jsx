@@ -4,11 +4,15 @@ import { Link } from 'react-router-dom';
 const Navbar = () => {
     return (
         <nav className="navbar">
-            <h1>Blog App</h1>
-            <ul>
+            <div className="navbar-container">
+            <h1 className="blog">Blog App</h1>
+            <ul className="nav-links">
                 <li><Link to="/">Home</Link></li>
-                <li><Link to="/most-commented">Most Commented</Link></li>
-            </ul>
+             </ul>
+            </div> 
            </nav> 
     );
 };
+
+
+export default Navbar;
